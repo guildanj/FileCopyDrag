@@ -12,11 +12,12 @@ A static method that fetches valid file data from your clipboard and saves it to
 ```csharp
 private void GetFilesFromClipboard()
 {
-	string[]? fileNames = FileCopyDrag.PasteFromClipboard();
-	if (fileNames != null && fileNames.Count > 0) 
-	{
-		Debug.WriteLine($"Found {fileNames.Count} files from your clipboard.");
-	}
+    string[]? fileNames = FileCopyDrag.PasteFromClipboard();
+
+    if (fileNames != null && fileNames.Count > 0) 
+    {
+        Debug.WriteLine($"Found {fileNames.Count} files from your clipboard.");
+    }
 }
 ```
 
@@ -25,11 +26,12 @@ A static method that requires `IDataObject` for drag and drop operations. Simila
 ```csharp
 private void GetFilesFromClipboard()
 {
-	string[]? fileNames = FileCopyDrag.();
-	if (fileNames != null && fileNames.Count > 0) 
-	{
-		Debug.WriteLine($"Found {fileNames.Count} files from your clipboard.");
-	}
+    string[]? fileNames = FileCopyDrag.();
+
+    if (fileNames != null && fileNames.Count > 0) 
+    {
+        Debug.WriteLine($"Found {fileNames.Count} files from your clipboard.");
+    }
 }
 ```
 
@@ -42,8 +44,8 @@ Sample code to get Outlook messages through drag-n-drop and copy-paste operation
 ```csharp
 public Form1()
 {
-	InitializeComponent();
-	ButtonPasteFromClipboard.Click += PasteFromClipboard;
+    InitializeComponent();
+    ButtonPasteFromClipboard.Click += PasteFromClipboard;
     ListBoxMails.DragEnter += DragEnter;
     ListBoxMails.DragDrop += DragDrop;
 }
