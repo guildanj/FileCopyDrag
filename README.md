@@ -5,7 +5,7 @@
 A static helper class for "Drag and Drop" and "Paste From Clipboard" functionality in C-Sharp .NET.
 
 
-## Usage
+## Methods
 
 **PasteFromClipboard**
 A static method that fetches valid file data from your clipboard and saves it to your temporary directory. It returns a `string[]` that contains the filenames of the copied files or `null` if there are none.
